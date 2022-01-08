@@ -2,6 +2,8 @@
 
 ## [whitepaper](https://solana.com/solana-whitepaper.pdf)
 
+## [Web](https://solana.com/es)
+
 ### Clase 2
 
 Creador de Solana: **Anatoly Yakovenko** (trabajo en dropbox y qualcomm)
@@ -12,8 +14,7 @@ La red de solana principal cuenta con **200 Nodos** y produce **un bloque cada 4
 
 #### Problema del Trilema (triangulo escalabilidad, seguridad y descentralizacion)
 
-                ESCALABILIDAD
-      SEGURIDAD               DESCENTRALIZACION
+![trilema](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/trilema.png)
 
 **Vitalik** dice que **solo se pueden tener dos de esas tres cosas por que tenemos muchas limitaciones por el hardware por la seguridad**
 
@@ -28,6 +29,8 @@ La blockhain de **bitcoin** utiliza un mecanismo de consenso que se llama **proo
 > - 👎 Escalabilidad
 
 La blockchain de **Ethereum** utiliza una mecanismo de consenso que se llama **proof of stake (PoS)** este es un mecanismo no se utiliza un programa para ejecutar las transacciones que tiene tanta carga computacional ya que proof of stake es mas determinístico que probabilístico. Y esto significa que la red es la que escoge cuales son los nodos que van a validar las transacciones de acuerdo a la participación en monedas que tenga cada uno de estos nodos. Esta red utiliza algo que se llama Casper y es que en caso de que algún nodo quiera ir en contra de la red pierde todas las monedas.
+
+![PoS](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/PoS.png)
 
 > Resumen PoS con Casper:
 >
