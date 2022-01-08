@@ -51,6 +51,8 @@ PoH es una función de retardo verificable implementada como una función hash s
 
 En resumen, la solución que trae Solana con el PoH es una sincronización a los retardos de la red.
 
+![PoH](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/PoH.png)
+
 > Resumen PoH:
 >
 > - 👍 Seguridad
