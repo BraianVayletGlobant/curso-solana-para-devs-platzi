@@ -4,7 +4,7 @@
 
 ## [Web](https://solana.com/es)
 
-### Clase 2
+## Notas:
 
 Creador de Solana: **Anatoly Yakovenko** (trabajo en dropbox y qualcomm)
 
