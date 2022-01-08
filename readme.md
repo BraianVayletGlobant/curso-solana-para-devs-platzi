@@ -19,7 +19,7 @@ La red de solana principal cuenta con **200 Nodos** y produce **un bloque cada 4
 
 La blockhain de **bitcoin** utiliza un mecanismo de consenso que se llama **proof of work (PoW)** este mecanismo le permite tener una muy buena seguridad debido a su alta descentralización sin embargo la escalabilidad no es buena debido a que las transacciones de bitcoin son muy lentas.
 
-![PoW](https://drive.google.com/file/d/1TNE3w3nUBAyagnVfa-cVsca2r3wUk9Wt/view?usp=sharing)
+![PoW](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/PoW.png)
 
 > Resumen PoW:
 >
