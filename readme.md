@@ -4,15 +4,13 @@
 
 ## [Web](https://solana.com/es)
 
-## Notas:
-
 Creador de Solana: **Anatoly Yakovenko** (trabajo en dropbox y qualcomm)
 
 En este momento Solana es la **blockchain mas rapida del mercado** por que tiene **50000 transacciones por segundo** y depende del hardware utilizado podríamos hablar hasta de 150 mil tps
 
 La red de solana principal cuenta con **200 Nodos** y produce **un bloque cada 4 segundos**
 
-#### Problema del Trilema 
+### Problema del Trilema 
 
 ![trilema](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/trilema.png)
 
