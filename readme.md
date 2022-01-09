@@ -185,3 +185,19 @@ Todos estos procesos permiten que las actualizaciones de la cuenta se copien en 
 Otra de las optimizaciones que hace Solana es tener un **recolector de basura** que básicamente lo que hace es eliminar las bifurcaciones que llevan mucho tiempo atrasadas, Bifurcaciones que ya no tienen confirmaciones sobre sus transacciones.
 
 En conclusión **solana no usa una base de datos**. Solana hace uso de las SSD disponibles en el sistema para poder registrar la información de dos maneras una es los archivos mapeados en memoria y la segunda es las operaciones secuenciales en vez de aleatorias.
+
+### Archivers
+
+**Archive**: es el almacenamiento del libro mayor distribuido.
+
+Está basado en los conceptos de **FileCoin** y del **Proof of Replication**.
+
+![PoRep1](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/PoRep1.png)
+
+Solana lo que hace es enviar la información a muchos nodos de la red, y para evitar problemas con que la información se pierda hay un verificador que cada cierto tiempo hace que estos nodos envíen pruebas de que si tienen almacenada la información por medio de criptografía.
+
+![PoRep2](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/PoRep2.png)
+
+Los clientes firman un hash de PoH en un periodo regular La firma es utilizada como fuente de aleatoriedad para elegir una porción especifica del libro mayor La firma se emplea para crear una clave CBC simétrica y el cliente codifica la porción del libro mayor con la clave
+
+Solana utiliza este Poreps debido a que si se utiliza Solana en su capacidad máxima podría llegar a producir hasta 4 Petabytes de información al año si esto se almacenara en nodos serian muy pocos los nodos que podrían almacenar toda esta información por lo tanto la red seria mas centralizada.
