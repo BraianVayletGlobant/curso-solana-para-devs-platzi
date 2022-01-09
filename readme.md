@@ -78,11 +78,23 @@ Se evitan los ataques de eclipse, se envía información cifrada sobre cuál es 
 
 El líder divide el bloque en paquetes de hasta 64 kb de tamaño. Para un bloque de 12 mb, el líder produce 2000 paquetes de 64 kb y transmite cada paquete a un validador diferente.
 
-![turbine1](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/turbine.png)
+![turbine1](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/turbine1.png)
 ![turbine2](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/turbine2.png)
 ![turbine3](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/turbine3.png)
 
 Si cada vecindario está compuesto por 200 nodos, una red de 3 niveles, comenzando con un solo líder en la raíz, puede llegar a 40000 validadores en 2 saltos.
 
 O aproximadamente 200 milisegundos asumiendo que cada enlace de red es de 100 ms en promedio.
+
+### Gulf Stream
+
+**Mempool (bytes):** Tamaño agregado en bytes de las transacciones que esperan ser confirmadas. Depende de la oferta y demanda del bloque que estén conectados transaccionado en ese momento. Los validadores de **Solana** pueden gestionar un tamaño de mempool de 100k. O sea que con un rendimiento de red de 50k TPS (transacciones por segundo), se ejecuta un mempool de 100k transacciones en cuestión de segundos.
+
+Como se ve una transacción en Solana:
+
+![tensol](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/TTL.png)
+
+**Gossip protocol:** Basado en un concepto muy básico para distribuir y propagar información a través de una red. En este protocolo, para que un nodo distribuya una información, sólo debe emparejarse con otros nodos de forma aleatoria. Una vez ocurre esto sólo debe intercambiar la información recibida con dichos nodos, quienes a su vez distribuirán la información con otros nodos a los que también están emparejados. Formando una cadena de distribución para propagar la información por toda la red de forma oportuna y eficaz.
+
+**Gulf Stream:** Es un protocolo de almacenamiento en caché de las transacciones de la red. Es el encargado de recibir la transacción y mandarla a todos los nodos, priorizando a los nodos generadores. Permite a todos los nodos de la red acceder a la información necesaria para la recreación de los bloques, lo que ayuda a los validadores a confirmar las transacciones antes de que se finalice el siguiente bloque, reduciendo los tiempos de confirmación y permite un volumen de transacciones sustancial.
 
