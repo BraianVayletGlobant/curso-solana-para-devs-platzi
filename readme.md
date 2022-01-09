@@ -135,3 +135,19 @@ en la **EVM de Ethereum** Por ejemplo, estos runtime ejecutan un solo subproceso
 ![tiempo-ejecucion](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/ejecucion.png)
 
 -> Solana hace uso de la **arquitectura CUDA** la cual se basa en una matriz escalable de multiprocesadores de transmisión multiproceso (hardware).
+
+### Pipelining
+
+Unidad de procesamiento de transacciones para la optimización de la validación.
+
+Dentro de la red de Solana hay diferentes hardware que se tienen que encargar de un proceso en especifico
+
+Ejemplo: Si tienes una fabrica que tienes muchos hardware que se encargan de construir un auto. Lo ideal es que todas vayan trabajando a la vez y no que a una le toque esperar que otra termine para empezar el trabjo que le toca hacer a ella
+
+Este mismo proceso lo hace solana con un proceso que se llama canalización.
+
+![canalizacion](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/canalizacion.png)
+
+Todo el hardware disponible, kernel, cpu y gpu, es usado el 100% a través de la canalización, cada parte tiene una tarea en el pipeline de validación.
+
+Este proceso se realiza de la siguiente manera, mientras el kernel realiza una captura de datos (fetch) este va a la GPU la cual se encarga de verificar y firmar esas transacciones (sign verify) y las envia a la CPU para que se almacenen (baking) y posteriormente se escriban en el kernel. Este proceso es continuo.
