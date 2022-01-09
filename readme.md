@@ -212,3 +212,18 @@ Solana utiliza este Poreps debido a que si se utiliza Solana en su capacidad má
 - Una cuenta ejecutable debe ser marcada para tal fin. ¡No se te olvide!
 - Al desplegar un programa, las cuentas que este genera serán de su propiedad, y es el único que puede accederlas y mofidicarlas.
 - Las cuentas pagan alquiler por el uso del sistema. Se puede pagar por adelantado o dejar cierto monto en la cuenta y que se descuente más a mes.
+
+
+## Interaccion con la red 
+
+### Clusters
+
+![accounts](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/accounts.png)
+
+Clusters disponibles para la comunidad:
+
+- **Devnet**: espacio para desarrollar, jugar y apredender, y se pueden solicitar ‘airdrops’ gratuitos y poder interactuar con la red.
+- **Testnet**: aunque es gratuito, se considera un ambiente de staging, con programas un poco más estable, antes de pasarlos a la red principal.
+- **Mainnet beta**: red de producción.
+
+Al crear una cuenta, ésta está disponible en todas las redes, y tengo que tener cuidado de seleccionar la red mientras estoy trabajando.
