@@ -213,8 +213,7 @@ Solana utiliza este Poreps debido a que si se utiliza Solana en su capacidad má
 - Al desplegar un programa, las cuentas que este genera serán de su propiedad, y es el único que puede accederlas y mofidicarlas.
 - Las cuentas pagan alquiler por el uso del sistema. Se puede pagar por adelantado o dejar cierto monto en la cuenta y que se descuente más a mes.
 
-
-## Interaccion con la red 
+## Interaccion con la red
 
 ### Clusters
 
@@ -227,3 +226,17 @@ Clusters disponibles para la comunidad:
 - **Mainnet beta**: red de producción.
 
 Al crear una cuenta, ésta está disponible en todas las redes, y tengo que tener cuidado de seleccionar la red mientras estoy trabajando.
+
+### Clientes
+
+![clients](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/clients.png)
+
+Para interactuar con la red de Solana existen estos medios o clientes:
+
+- Llamadas [JSON RPC API](https://docs.solana.com/developing/clients/jsonrpc-api) contra un nodo de Solana.
+- Librería [Solana-Web3.js](https://docs.solana.com/developing/clients/javascript-api) que cuenta con toda la lógica en JavaScript para interactuar con los nodos, similar al web3.js de Ethereum.
+- Librerías **Rust API**, crates de Rust para interactuar con los nodos.
+  - [Solana-program](https://docs.rs/solana-program/latest/solana_program/)
+  - [Solana-SDK](https://docs.rs/solana-sdk/latest/solana_sdk/)
+  - [Solana-client](https://docs.rs/solana-client/latest/solana_client/)
+  - [Solana-clap-utils](https://docs.rs/solana-clap-utils/latest/solana_clap_utils/)
