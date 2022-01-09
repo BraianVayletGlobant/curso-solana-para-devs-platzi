@@ -56,3 +56,14 @@ En resumen, la solución que trae Solana con el PoH es una sincronización a los
 > - 👍 Seguridad
 > - 👍 Descentralización
 > - 👍 Escalabilidad
+
+### Tower BFT
+
+Solana usa:
+
+![PoS-TDMA](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/PoS-TDMA.png)
+
+- Proof of stake como método de consenso.
+- Se sincroniza la info por medio de TDMA, el ancho de banda de la blockchain es dividido entre los participantes.
+- Un nodo tiene capacidad de calcular el estado de toda la red.
+- Un nodo 
