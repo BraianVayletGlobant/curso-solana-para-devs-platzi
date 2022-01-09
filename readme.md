@@ -86,15 +86,3 @@ Si cada vecindario está compuesto por 200 nodos, una red de 3 niveles, comenzan
 
 O aproximadamente 200 milisegundos asumiendo que cada enlace de red es de 100 ms en promedio.
 
-### Gulf Stream
-
-**Mempool (bytes):** Tamaño agregado en bytes de las transacciones que esperan ser confirmadas. Depende de la oferta y demanda del bloque que estén conectados transaccionado en ese momento. Los validadores de **Solana** pueden gestionar un tamaño de mempool de 100k. O sea que con un rendimiento de red de 50k TPS (transacciones por segundo), se ejecuta un mempool de 100k transacciones en cuestión de segundos.
-
-Como se ve una transacción en Solana:
-
-![tensol](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/TransEnSolana.png)
-
-**Gossip protocol:** Basado en un concepto muy básico para distribuir y propagar información a través de una red. En este protocolo, para que un nodo distribuya una información, sólo debe emparejarse con otros nodos de forma aleatoria. Una vez ocurre esto sólo debe intercambiar la información recibida con dichos nodos, quienes a su vez distribuirán la información con otros nodos a los que también están emparejados. Formando una cadena de distribución para propagar la información por toda la red de forma oportuna y eficaz.
-
-**Gulf Stream:** Es un protocolo de almacenamiento en caché de las transacciones de la red. Es el encargado de recibir la transacción y mandarla a todos los nodos, priorizando a los nodos generadores. Permite a todos los nodos de la red acceder a la información necesaria para la recreación de los bloques, lo que ayuda a los validadores a confirmar las transacciones antes de que se finalice el siguiente bloque, reduciendo los tiempos de confirmación y permite un volumen de transacciones sustancial.
-
