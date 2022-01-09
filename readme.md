@@ -3,24 +3,6 @@
 Profesora Carolina Velásquez
 @kornatis
 
-## Tabla de Contenidos
-
-- [¿Qué es Solana?](#qué-es-solana)
-  - [Proof of History (POH)](#proof-of-history-poh)
-- [Funcionamiento de Solana](#introducción-a-la-programación-con-solidity)
-  - [Tower BFT](#tower-bft)
-  - [Turbine](#turbine)
-  - [Gulf Stream](#gulf-stream)
-  - [Sealevel](#sealevel)
-  - [Pipelining](#pipelining)
-  - [Cloudbreak](#cloudbreak)
-  - [Archivers](#archivers)
-  - [Accounts](#accounts)
-- [Interacción con la red](#interacción-con-la-red)
-  - [Clusters](#clusters)
-  - [Clientes](#clientes)
-  - [Flujo de trabajo de desarrollo en Solana](#flujo-de-trabajo-de-desarrollo-en-solana)
-  
 # ¿Qué es Solana?
 
 - Página oficial: [https://solana.com/es](https://solana.com/es)
