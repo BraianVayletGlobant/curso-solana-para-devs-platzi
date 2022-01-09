@@ -6,10 +6,10 @@ Profesora Carolina Velásquez
 ## Tabla de Contenidos
 
 - [¿Qué es Solana?](#qué-es-solana)
-  - [Proof of History (POH)](#proof-of-history-poh) 
+  - [Proof of History (POH)](#proof-of-history-poh)
 - [Funcionamiento de Solana](#introducción-a-la-programación-con-solidity)
   - [Tower BFT](#tower-bft)
-  - [Turbine](#turbine) 
+  - [Turbine](#turbine)
   - [Gulf Stream](#gulf-stream)
   - [Sealevel](#sealevel)
   - [Pipelining](#pipelining)
@@ -76,7 +76,7 @@ La blockchain de **Ethereum** utiliza una mecanismo de consenso que se llama **p
 
 ![PoS](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/PoS.png)
 
-> Resumen PoS con Casper: Es determinístico, la red asigna cuales son los nodos que validarán la transacción.
+> Resumen PoS con Casper: Es determinístico, la red asigna cuales son los nodos que validará la transacción.
 >
 > - 👍 Seguridad
 > - 👎 Descentralización
@@ -86,7 +86,7 @@ La blockchain de **Ethereum** utiliza una mecanismo de consenso que se llama **p
 
 PoH es una función de retardo verificable implementada como una función hash secuencial. [link](https://es.wikipedia.org/wiki/Proof_of_History)
 
-¿Qué pasaría si en lugar de confiar en la marca de tiempo pudiera probar que el mensaje ocurrió en algún momento antes y después de un evento? Cuando te tomas una fotografía con la portada del New York Times, estás creando una prueba de que tu fotografía fue tomada después de que se publicó ese periódico, o tienes alguna forma de influir en lo que publica el New York Times. Con Proof of History, puede crear un registro histórico que demuestre que un evento ha ocurrido en un momento específico en el tiempo. 
+¿Qué pasaría si en lugar de confiar en la marca de tiempo pudiera probar que el mensaje ocurrió en algún momento antes y después de un evento? Cuando te tomas una fotografía con la portada del New York Times, estás creando una prueba de que tu fotografía fue tomada después de que se publicó ese periódico, o tienes alguna forma de influir en lo que publica el New York Times. Con Proof of History, puede crear un registro histórico que demuestre que un evento ha ocurrido en un momento específico en el tiempo.
 
 La Proof of History es una función de retardo verificable de alta frecuencia. Una función de retardo verificable requiere un número específico de pasos secuenciales para evaluar, pero produce un resultado único que se puede verificar de manera eficiente y pública.
 
@@ -116,9 +116,9 @@ PoS-TDMA
 
 ---
 
-## Funcionamiento de Solana
+## # Funcionamiento de Solana
 
-## Tower BFT
+## # Tower BFT
 
 Byzantine Fault Tolerance garantiza una tolerancia a fallos del sistema, si una parte del sistema (procesador) falla las demás partes deben seguir funcionando.
 
@@ -130,7 +130,7 @@ Tower BFT es un protocolo de tolerancia a fallas bizantinas que combinado con Pr
 
 Tower BFT por Anatoly Yakovenko: [https://medium.com/solana-labs/tower-bft-solanas-high-performance-implementation-of-pbft-464725911e79](https://medium.com/solana-labs/tower-bft-solanas-high-performance-implementation-of-pbft-464725911e79)
 
-## Turbine
+## # Turbine
 
 Es un método de propagación de transacciones en Solana.
 
@@ -138,52 +138,68 @@ Ejemplo de red tradicional :
 
 [![11](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/11.png?raw=true "11")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/11.png?raw=true "11")
 
-Enviar 128 MB a 20.000 validadores puede ser complicado en la red tradicional de Bitcoin, pero Solana basandose en el protocolo de **BitTorrent** logra solucionar este problema.
+Enviar 128 MB a 20.000 validadores puede ser complicado en la red tradicional de Bitcoin, pero Solana basándose en el protocolo de **BitTorrent** logra solucionar este problema.
 
-Hay dos conceptos clave en BitTorrent: el TCP donde la comunición esta orientada a conexión con una línea directa para enviar un mensaje, y el UDP que es una conexión orientada a enviar el mensaje por paquetes. Este último es donde Solana hace lo mismo con la información que pasa por su red.
+Hay dos conceptos clave en BitTorrent: el TCP donde la comunicación está orientada a conexión con una línea directa para enviar un mensaje, y el UDP que es una conexión orientada a enviar el mensaje por paquetes. Este último es donde Solana hace lo mismo con la información que pasa por su red.
 
 [![12](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/12.png?raw=true "12")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/12.png?raw=true "12")
 
 En la red de Solana el líder divide el bloque en paquetes de hasta 64 KB de tamaño.  Para un bloque de 128 MB, el líder produce 2000 paquetes de 64 KB y transmite cada paquete a un validador diferente.
 
 [![13](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/13.png?raw=true "13")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/13.png?raw=true "13")
+[![34](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/34.png?raw=true "34")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/34.png?raw=true "34")
+[![35](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/35.png?raw=true "35")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/35.png?raw=true "35")
+[![36](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/36.png?raw=true "36")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/36.png?raw=true "36")
 
-¿Que pasa si hackers quieren apoderarse de la red y hacer una ataque eclipse?
+¿Qué pasa si hackers quieren apoderarse de la red y hacer una ataque eclipse?
 
-**Ataque eclipse: Busca desconectar a la víctima del flujo de datos válido de la red. Esto con el propósito de que la víctima reciba datos manipulados por la parte del atacante. 
+**Ataque eclipse**Busca desconectar a la víctima del flujo de datos válido de la red. Esto con el propósito de que la víctima reciba datos manipulados por parte del atacante.
 
-Para prevenir esto en la red se envían datos cifrados sobre cual será el próximo nodo donde irá la información, se tendría que hackear o alterar todos los nodos a la vez para poder vulnerarla.
+Para prevenir esto en la red se envían datos cifrados sobre cuál será el próximo nodo donde irá la información, se tendría que hackear o alterar todos los nodos a la vez para poder vulnerarla.
 
-## Gulf Stream
+## # Gulf Stream
 
-Primero hay que entender el concepto de **mempool** que son la cantidad de transacciones sin confirmar dentro de la red, en Bitcoin se encuentra en 10.000 - 20.000. Para esto Solana creó el protocolo Gulf Stream que es un reenvío de transacciones sin mempool.
+Primero hay que entender el concepto de **mempool** que es el tamaño agregado en bytes de las transacciones que esperan ser confirmadas en la red. Estas dependen de la oferta y demanda del bloque al que se estén conectados y transaccionado en ese momento, en Bitcoin se encuentra en 10.000 - 20.000.
+
+**Solana** pueden gestionar un tamaño de mempool de 100k. O sea que con un rendimiento de red de 50k TPS (transacciones por segundo), se ejecuta un mempool de 100k transacciones en cuestión de segundos.
+
+Para esto Solana creó el protocolo Gulf Stream que es un reenvío de transacciones sin mempool.
 
 [![14](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/14.png?raw=true "14")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/14.png?raw=true "14")
 
-Gulf Stream es un protocolo de almacenamiento en cache de las transacciones de la red. Es el encargado de recibir la transacción y mandarla a todos los nodos, priorizando a los nodos generadores. Permite a todos los nodos de la red acceder a la información necesaria para la recreación de los bloques, lo que ayuda a los validadores a confirmar las transacciones antes de que se finalice el siguiente bloque, reduciendo los tiempos de confirmación y permite un volumen de transacciones sustancial.
+**Gulf Stream** Es un protocolo de almacenamiento en caché de las transacciones de la red. Es el encargado de recibir la transacción y mandarla a todos los nodos, priorizando a los nodos generadores. Permite a todos los nodos de la red acceder a la información necesaria para la recreación de los bloques, lo que ayuda a los validadores a confirmar las transacciones antes de que se finalice el siguiente bloque, reduciendo los tiempos de confirmación y permite un volumen de transacciones sustancial.
 
-Suponiendo que un bloque se genera cada 800 ms, para que un bloque sea totalmente validado es necesario un TTL - Time to Live (# de bloques que tiene ~ 32 bloques) significa que en 24 s la transacción va estar totalmente validada.
+Suponiendo que un bloque se genera cada 800 ms, para que un bloque sea totalmente validado es necesario un TTL - Time to Live (# de bloques que tiene aproximadamente 32 bloques) significa que en 24 s la transacción va estar totalmente validada.
 
 [![15](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/15.png?raw=true "15")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/15.png?raw=true "15")
 
-## Sealevel
+## # Sealevel
 
-Es el procesamiento en paralelo de decenas de miles de contratos inteligentes.
+Es el procesamiento en paralelo de decenas de miles de contratos inteligentes que se pueden ejecutar al mismo tiempo usando las GPU.
 
 A diferencia de la EVM - Ethereum Virtual Machine que solo puede modificar un estado a la vez, Solana puede modificar muchos estados con varios procesos en background.
 
 [![16](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/16.png?raw=true "16")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/16.png?raw=true "16")
 
-Es necesario entender los conceptos de programas y cuentas, en Solana todo son cuentas desde los programas hasta la información dentro de estas. Todas las cuentas contienen una llave pública. saldo, datos y la llave pública del propietario.
+## # Programas y cuentas
+
+En solana todos los programas son cuentas, tanto los programas como las información asociada a ellos están registrados en cuentas.
+
+Cuando se despliega un programa en solana se obtiene un PublicKey de ese programa y para registrar información esta se registra en cuentas, estas cuentas son propiedad del programa asociado.
+
+Todas las cuentas poseen una PublicKey, un saldo, datos y un propietario.
 
 [![17](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/17.png?raw=true "17")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/17.png?raw=true "17")
 
-Consideraciones: 
+Consideraciones:
 
-- Los programas solo pueden cambiar los datos de las cuentas que poseen.
-- Solo pueden debitar cuentas de su propiedad.
-- Cualquier programa puede acreditar cualquier cuenta. 
-- Cualquier programa puede leer cualquier cuenta.
+- Los programas solo pueden cambiar los datos de las cuentas que poseen y solo pueden debitar cuentas de su propiedad.
+- Cualquier programa puede leer y acreditar en cualquier cuenta.
+- La cesión de la propiedad de una cuenta sólo puede ocurrir una vez en la vida de la cuenta.
+
+- (revisar )Metaplex: Protocol and application framework for decentralized NFT minting, storefronts, and sales. (github)
+
+### # System programs
 
 Solana es como un sistema operativo con herramientas previamente diseñadas para sus usuarios, esto se le conoce como el System program que de forma predeterminada, es propietario de todas las cuentas cuando inician.
 
@@ -198,45 +214,49 @@ Como un cliente puede cargar programas customizados en la red de Solana, program
 
 > No se ejecutará si no está marcado como Ejecutable.
 
-Cada una de las transacciones esta conformada por instrucciones, estas hacen referencia a un programa, las instrucciones de ese programa y todas las cuentas que están relacionadas.
+### # Transacciones
+
+Cada una de las transacciones está conformada por instrucciones, estas hacen referencia a un programa, las instrucciones de ese programa y todas las cuentas que están relacionadas. 
+
+> *Transacciones -> Programa -> Instrucciones del programa -> cuentas.*
 
 [![19](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/19.png?raw=true "19")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/19.png?raw=true "19")
 
 En tiempo de ejecución funciona de la siguiente manera:
 
+El **cliente (dApp)** se comunica con el programa por medio de un proceso de **serialización** donde Solana y los contratos **des-serializan** esa información para ejecutar las transacciones del programa.
+
 [![20](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/20.png?raw=true "20")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/20.png?raw=true "20")
 
-Los smart contracts de Solana hacen uso del lenguaje C y de Rust, para crear un ecosistema de programación de smart contracts unico. Esto ofrece una gran capacidad de palelización de la ejecución de smart contracts. Sealevel es el nombre que han dado los desarrolladores de Solana a estas capacidades.
+Los smart contracts de Solana hacen uso del lenguaje C y de Rust, para crear un ecosistema de programación de smart contracts único. Esto ofrece una gran capacidad de paralelización de la ejecución de smart contracts. Sealevel es el nombre que han dado los desarrolladores de Solana a estas capacidades.
 
-Mediante esta función se permite la capacidad de leer, ejecutar y escribir instrucciones de manera paralela dentro de la capa de ejecución de smart contracts de Solana. Un smart contract puede eecutar múltiples acciones simultanemente, mientras que en Ethereum y EOS solo se puede una acción a la vez.
+Mediante esta función se permite la capacidad de leer, ejecutar y escribir instrucciones de manera paralela dentro de la capa de ejecución de smart contracts de Solana. Un smart contract puede ejecutar múltiples acciones simultáneamente, mientras que en Ethereum y EOS solo se puede una acción a la vez.
 
-Sealevel lo que permite a Solana es una mayor escalabilidad que otras redes blockchain. Podría llegar, con la integración de suficientes nodos de alto rendimiento soportar hasta 500.000 transacciones por segundo. Adicionalmente se elimina la necesidad de una segunda capa para mejorar la escalabilidad.
+Sealevel lo que permite a Solana es una mayor escalabilidad que otras redes blockchain. Podría, con la integración de suficientes nodos de alto rendimiento, soportar hasta 500.000 transacciones por segundo. Adicionalmente se elimina la necesidad de una segunda capa para mejorar la escalabilidad.
 
-Sealevel utiliza en la arquitectura CUDA, tecnología de hardware de NVIDIA que se basa en una matriz escalable de multiprocesadores de trasminsión miltiproceso.
+Sealevel utiliza en la arquitectura CUDA, tecnología de hardware de NVIDIA que se basa en una matriz escalable de multiprocesadores de trasmisión multiproceso.
 
-Aunque solo se puede hacer una entrada por multiprocesador puede generar multiples procesos para aumentar las entradas a un mismo contrato inteligente.
+Aunque solo se puede hacer una entrada por multiprocesador puede generar múltiples procesos para aumentar las entradas a un mismo contrato inteligente.
 
-## Pipelining
+## # Pipelining
 
 Es una unidad de procesamiento de transacciones para la optimización de la validación.
 
-Se hace la compraración con el concepto de producción de autos en serie de Henry Ford, donde no se pueden dejar en espera los brazos robots mientras otro termina su tarea, sino que se deben programar de tal forma que se cree una cadena de producción sin esos tiempos de espera.
+Se hace la comparación con el concepto de producción de autos en serie de Henry Ford, donde no se pueden dejar en espera los brazos robots mientras otro termina su tarea, sino que se deben programar de tal forma que se cree una cadena de producción sin esos tiempos de espera.
 
-[![21](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/21.png?raw=true "21")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/21.png?raw=true "21")
-
-Lo mismo hace Solana con el proceso llamano canalización / pipelining, que es la TPU - Unidad de Procesamiento de Transacciones. Se genera una captura de datos a nivel del Kernel, luego la firma y verificación en la GPU, el proceso transaccional de Banking se hace en la CPU y por último la escritura en Kernel, ocupando la mayor capacidad del hardware optimizando recursos.
+Lo mismo hace Solana con el proceso llamado canalización / pipelining, que es la TPU - Unidad de Procesamiento de Transacciones. Se genera una captura de datos a nivel del Kernel, luego la firma y verificación en la GPU, el proceso transaccional de Banking se hace en la CPU y por último la escritura en Kernel, ocupando la mayor capacidad del hardware optimizando recursos.
 
 [![22](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/22.png?raw=true "22")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/22.png?raw=true "22")
 
-## Cloudbreak
+## # Cloudbreak
 
-Es una base de datos de escalado de cuentas horizontal. 
+Es una base de datos de escalado de cuentas horizontal.
 
 Algunas blockchain utilizan LevelDB se usa como base de datos de backend para IndexedDB de Google Chrome y es uno de los backends compatibles con Riak.  Además, Bitcoin Core y go-ethereum almacenan los metadatos de la cadena de bloques utilizando una base de datos LevelDB.  Minecraft Bedrock Edition utiliza una versión modificada para el almacenamiento de datos de fragmentos y entidades.  Autodesk AutoCAD 2016 también utiliza LevelDB.
 
-Github LevelDB: https://github.com/google/leveldb
+Github LevelDB: <https://github.com/google/leveldb>
 
-La máquina virtual no puede usar uso de la fracción de la base de datos para poder lecturas y escrituras simulateneas, esto hace que tenga un límite de 5.000 transacciones por segundo. 
+La máquina virtual no puede usar uso de la fracción de la base de datos para poder lecturas y escrituras simultáneas, esto hace que tenga un límite de 5000 TPS transacciones por segundo.
 
 Dataship de SSD Samsung del mercado, la SSD es 30 veces de menor costo por byte es 1.000 veces más lenta que una RAM:
 
@@ -246,50 +266,51 @@ Dataship de SSD Samsung del mercado, la SSD es 30 veces de menor costo por byte 
 
 Los SSD modernos admiten 32 subprocesos simultáneos, por lo que pueden admitir 370.000 lecturas/segundo, o aproximadamente 185.000 tps.
 
-Las blockchain tradiconales generan un cuello de botella debido a la CPU, pero Solana utiliza Archivos mapeados de memoria y Operaciones secuenciales en vez de aleatorias.
+Las blockchain tradicionales generan un cuello de botella debido a la CPU, pero Solana utiliza ***Archivos mapeados de memoria*** y ***Operaciones secuenciales en vez de aleatorias***.
 
 [![25](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/25.png?raw=true "25")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/25.png?raw=true "25")
 
 Características de las operaciones secuenciales:
 
+``` cmd
 1. El índice de cuentas y bifurcaciones se almacena en la RAM.  
 2. Las cuentas se almacenan en archivos asignados en memoria de hasta 4 MB de tamaño.
 3. Cada mapa de memoria solo almacena cuentas de una única bifurcación propuesta.  
 4. Los mapas se distribuyen aleatoriamente en tantos SSD como estén disponibles.
 5. Se utiliza semántica de copy on write.  
 6. Las escrituras se agregan a un mapa de memoria aleatorio para la misma bifurcación.  
-7. El indice se actualiza después de que se completa cada escritura.
+7. El índice se actualiza después de que se completa cada escritura.
+```
 
 [![26](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/26.png?raw=true "26")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/26.png?raw=true "26")
 
-Solana tambien tiene un Recolector de basura que elimina las bifurcaciones que llevan mucho tiempo atrasadas y sin confirmar sus transacciones.
+Solana también tiene un Recolector de basura que elimina las bifurcaciones que llevan mucho tiempo atrasadas y sin confirmar sus transacciones.
 
 En conclusión Solana no utiliza una base de datos sino hace uso de las SSD del sistema para optimizar utilizando Archivos mapeados de memoria y Operaciones secuenciales en vez de aleatorias.
 
-## Archivers
+## # Archivers
 
 Es el almacenamiento del libro mayor distribuido.
 
 Se utilizan para almacenar datos. Descargan los datos de los validadores de consenso. La tecnología PoH permite la implementación de Proof-of-Replication (PoRep), para la verificación por lotes, en millones de nodos Replicator en todo el mundo. Los archivadores le dicen a la red cuántos bytes tienen disponibles para almacenamiento. Según el almacenamiento total disponible de Archiver y la cantidad de identidades de Replicator, la red divide el ledger en las partes correctas para que coincida con la tasa de replicación y la tolerancia a fallas. Los archivadores reciben una recompensa de aproximadamente el 3% de la inflación por el esfuerzo de almacenamiento.
 
-Mejor explicación de PoRep: https://filecoin.io/ 
+Mejor explicación de PoRep: <https://filecoin.io/>
 
 [![27](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/27.png?raw=true "27")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/27.png?raw=true "27")
 
 [![28](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/28.png?raw=true "28")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/28.png?raw=true "28")
 
-Ledger Replication: https://docs.solana.com/proposals/ledger-replication-to-implement
+Ledger Replication: <https://docs.solana.com/proposals/ledger-replication-to-implement>
 
-## Accounts
+## # Accounts
 
 En Solana todo son cuentas desde los programas hasta la información dentro de estas. Es importante tener en cuenta los siguientes componentes:
 
 - **Signers:** lista de cuentas afectadas durante una instrucción.
 - **Solo lectura:** Se pueden tener miles de procesos accediendo a la información.
-- **Ejecutabe:** No se ejecutará si no está marcado como Ejecutable.
+- **Ejecutable:** No se ejecutará si no está marcado como Ejecutable.
 - **Propiedad:** Las cuentas son propiedad del programa que ejecuta.
 - **Alquiler:** Se paga alquiler por la creación de una cuenta.
-
 
 # Interacción con la red
 
@@ -301,29 +322,29 @@ Son agrupaciones de computadores para un fin en especifico que se ejecutan como 
 
 Los costos de alquiler, el costo computacional, las transacciones en la red de Solana.
 
-Asi como la unidad de divión de un Bitcoin es un Satoshi, en Solana la unidad de división es el Lamport.
+Así como la unidad de división de un Bitcoin es un Satoshi, en Solana la unidad de división es el Lamport.
 
-La devnet es para hacer pruebas y solicitar airdrops, la testnet es más utilizada por los desarrolladores como paso antes de pasar a la main, por último en la mainnet e sla red donde se ejecutan los contrato en producción con lamports de verdad.
+La devnet es para hacer pruebas y solicitar airdrops, la testnet es más utilizada por los desarrolladores como paso antes de pasar a la main, por último en la mainnet e sla red donde se ejecutan los contratos en producción con lamports de verdad.
 
 ## Clientes
 
-Son los que pertmiten interactuar con estas redes:
+Son los que permiten interactuar con estas redes:
 
 [![30](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/30.png?raw=true "30")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/30.png?raw=true "30")
 
 **JSON RPC API:** Hace una llamada a un procedimiento de un sistema donde se hace pruebas a una API.
 
-https://docs.solana.com/developing/clients/jsonrpc-api
+<https://docs.solana.com/developing/clients/jsonrpc-api>
 
-**Solana-Web3.js:** Librería de herramientas desarrolde fácil acceso a desarrolladores. Es el más usado.
+**Solana-Web3.js:** Librería de herramientas de desarrollo de fácil acceso a desarrolladores. Es el más usado.
 
-https://docs.solana.com/developing/clients/javascript-api
+<https://docs.solana.com/developing/clients/javascript-api>
 
-https://github.com/solana-labs/solana-program-library
+<https://github.com/solana-labs/solana-program-library>
 
 **Rust API:** Se pueden crear aplicaciones de diferentes tipos.
 
-https://docs.solana.com/developing/clients/rust-api
+<https://docs.solana.com/developing/clients/rust-api>
 
 ## Flujo de trabajo de desarrollo en Solana
 
@@ -335,5 +356,7 @@ Se puede ver como una estructura tradicional de cliente - servidor, donde el ser
 
 [![32](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/32.png?raw=true "32")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/32.png?raw=true "32")
 
-Primero el programa tiene que estar construido en Rust, C, C++ compatible con el BPF bytecode, cuando se despliega el programa en la red de Solana y se invoca se puede a través de la línea de comandos o alguno de los clientes mencionados (El RPC es muy flexible incluso se puede crear en Python, Java..). Con este cliente se llama al servidor o red de solana y por medio de las transacciones llaman a todas las instrucciones de los programas, que básicamente son querys que se hacen a la red y de esta manera se puede interctuar.
+Primero el programa tiene que estar construido en Rust, C, C++ compatible con el BPF bytecode, cuando se despliega el programa en la red de Solana y se invoca se puede a través de la línea de comandos o alguno de los clientes mencionados (El RPC es muy flexible incluso se puede crear en Python, Java..). Con este cliente se llama al servidor o red de solana y por medio de las transacciones llaman a todas las instrucciones de los programas, que básicamente son querys que se hacen a la red y de esta manera se puede interactuar.
+
+
 
