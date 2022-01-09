@@ -240,3 +240,9 @@ Para interactuar con la red de Solana existen estos medios o clientes:
   - [Solana-SDK](https://docs.rs/solana-sdk/latest/solana_sdk/)
   - [Solana-client](https://docs.rs/solana-client/latest/solana_client/)
   - [Solana-clap-utils](https://docs.rs/solana-clap-utils/latest/solana_clap_utils/)
+
+### Flujo de trabajo de desarrollo
+
+![flujo](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/flujo.png)
+
+![flujo2](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/flujo2.png)
