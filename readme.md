@@ -64,6 +64,25 @@ Solana usa:
 ![PoS-TDMA](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/PoS-TDMA.png)
 
 - Proof of stake como método de consenso.
-- Se sincroniza la info por medio de TDMA, el ancho de banda de la blockchain es dividido entre los participantes.
-- Un nodo tiene capacidad de calcular el estado de toda la red.
-- Un nodo 
+- Se sincroniza la información por medio de TDMA, el ancho de banda de la blockchain es dividido entre los participantes.
+- Un nodo tiene la capacidad de calcular el estado de toda la red.
+- Un nodo
+
+### Turbine
+
+Turbine es el formato de comunicación solana.
+
+Consta de contar la nueva info a tus vecinos, y estos vecinos a sus vecinos.
+
+Se evitan los ataques de eclipse, se envía información cifrada sobre cuál es el siguiente vecindario y evita prever cuál será el siguiente paso. Sólo tomando toda la red se podría modificar los datos.
+
+El líder divide el bloque en paquetes de hasta 64 kb de tamaño. Para un bloque de 12 mb, el líder produce 2000 paquetes de 64 kb y transmite cada paquete a un validador diferente.
+
+![turbine1](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/turbine.png)
+![turbine2](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/turbine2.png)
+![turbine3](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/turbine3.png)
+
+Si cada vecindario está compuesto por 200 nodos, una red de 3 niveles, comenzando con un solo líder en la raíz, puede llegar a 40000 validadores en 2 saltos.
+
+O aproximadamente 200 milisegundos asumiendo que cada enlace de red es de 100 ms en promedio.
+
