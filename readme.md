@@ -10,7 +10,7 @@ En este momento Solana es la **blockchain mas rapida del mercado** por que tiene
 
 La red de solana principal cuenta con **200 Nodos** y produce **un bloque cada 4 segundos**
 
-### Problema del Trilema 
+### Problema del Trilema
 
 ![trilema](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/trilema.png)
 
@@ -151,3 +151,37 @@ Este mismo proceso lo hace solana con un proceso que se llama canalización.
 Todo el hardware disponible, kernel, cpu y gpu, es usado el 100% a través de la canalización, cada parte tiene una tarea en el pipeline de validación.
 
 Este proceso se realiza de la siguiente manera, mientras el kernel realiza una captura de datos (fetch) este va a la GPU la cual se encarga de verificar y firmar esas transacciones (sign verify) y las envia a la CPU para que se almacenen (baking) y posteriormente se escriban en el kernel. Este proceso es continuo.
+
+### Cloudbreak
+
+Es una base de datos de escalado de cuentas horizontal. Algunas de sus predecesores usan **levelDb**.
+
+**LevelDB** se utiliza como base de datos de backend para IndexedDB de Google Chrome y es uno de los backends compatibles con Riak. Además, Bitcoin Core y go-ethereum almacenan los metadatos de la cadena de bloques utilizando una base de datos LevelDB. Esta tiene un inconveniente y es que la base de datos no puede hacer uso de lecturas y escrituras simultaneas, por esta razón tiene un **máximo de 5000 TPS (transacciones por segundo)**
+
+Los SSD modernos admiten 32 subprocesos simultáneos, por lo que pueden admitir 370000 lecturas por segundo aproximadamente 185mil tps sin embargo organizar la base de datos en cuentas de manera que sea posible lecturas y escrituras simultaneas entre estos 32 subprocesos es un desafío.
+
+Hasta este punto en las blockchain tradicionales se ha generado un cuello de botella a pesar de que la GPU y la SSD tengan un mayor rendimiento la CPU no lo tiene.
+
+![cuello](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/cuello.png)
+
+Por esta razón Solana no hace uso de una base de datos tradicional para resolver el problema al contrario utiliza los siguientes procedimientos:
+
+``` cmd
+1. Archivos Mapeados en memoria
+2. Utiliza operaciones secuenciales en vez de aleatorias
+  a. El índice de cuentas y bifurcaciones se almacena en RAM
+  b. Las cuentas se almacenan en archivos asignados en memoria de hasta 4MB de tamaño
+  c. Cada mapa de memoria solo almacena cuentas de una única bifurcación propuesta
+  d. Los mapas se destruyen aleatoriamente en tantos SSD como estén disponibles
+  e. Se utiliza semántica de copy on writes
+  f. Las escrituras se agregan a un mapa de memoria aleatorio para la misma bifurcación.
+  g. El índice se actualiza después de que se completa cada escritura.
+```
+
+![randomSSD](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/randomSSD.png)
+
+Todos estos procesos permiten que las actualizaciones de la cuenta se copien en la escritura y se agregen a un SSD aleatorio escalando tanto serialmente como horizontalmente
+
+Otra de las optimizaciones que hace Solana es tener un **recolector de basura** que básicamente lo que hace es eliminar las bifurcaciones que llevan mucho tiempo atrasadas, Bifurcaciones que ya no tienen confirmaciones sobre sus transacciones.
+
+En conclusión **solana no usa una base de datos**. Solana hace uso de las SSD disponibles en el sistema para poder registrar la información de dos maneras una es los archivos mapeados en memoria y la segunda es las operaciones secuenciales en vez de aleatorias.
