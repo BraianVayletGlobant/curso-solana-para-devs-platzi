@@ -30,7 +30,7 @@ La blockchain de **bitcoin** utiliza un mecanismo de consenso que se llama **pro
 
 ### Proof of Stake (PoS)
 
-La blockchain de **Ethereum** utiliza una mecanismo de consenso que se llama **proof of stake (PoS)** Este es un mecanismo no se utiliza un programa para ejecutar las transacciones que tiene tanta carga computacional ya que proof of stake es más determinista que probabilístico. Y esto significa que la red es la que escoge cuáles son los nodos que van a validar las transacciones de acuerdo a la participación en monedas que tenga cada uno de estos nodos. Esta red utiliza algo que se llama Casper y es que en caso de que algún nodo quiera ir en contra de la red pierde todas las monedas.
+La blockchain de **Ethereum** utiliza una mecanismo de consenso que se llama **proof of stake (PoS)** Este es un mecanismo no se utiliza un programa para ejecutar las transacciones que tiene tanta carga computacional ya que el proof of stake es más determinista que probabilístico. Y esto significa que la red es la que escoge cuáles son los nodos que van a validar las transacciones de acuerdo a la participación en monedas que tenga cada uno de estos nodos. Esta red utiliza algo que se llama Casper y es que en caso de que algún nodo quiera ir en contra de la red pierde todas las monedas.
 
 ![PoS](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/PoS.png)
 
@@ -98,3 +98,40 @@ Como se ve una transacción en Solana:
 
 **Gulf Stream:** Es un protocolo de almacenamiento en caché de las transacciones de la red. Es el encargado de recibir la transacción y mandarla a todos los nodos, priorizando a los nodos generadores. Permite a todos los nodos de la red acceder a la información necesaria para la recreación de los bloques, lo que ayuda a los validadores a confirmar las transacciones antes de que se finalice el siguiente bloque, reduciendo los tiempos de confirmación y permite un volumen de transacciones sustancial.
 
+### Sealevel
+
+**SeaLevel** Es el procesamiento en paralelo de decenas de miles de contratos inteligentes que se pueden ejecutar en paralelo al mismo tiempo usando las GPU de contratos inteligentes.
+
+![evm](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/evm.png)
+
+en la **EVM de Ethereum** Por ejemplo, estos runtime ejecutan un solo subproceso que solo puede modificar un estado a la vez. En cambio en **Solana** Se pueden ejecutar muchos de estos procesos al mismo tiempo en background.
+
+**Programas y Cuentas**:
+
+- En solana todos los programas son cuentas
+- Tanto los programas como las información asociada a ellos están registrados en cuentas.
+- Cuando se despliega un programa en solana se obtiene un PublicKey de ese programa y para registrar información esta se registra en cuentas, estas cuentas son propiedad del programa asociado.
+- Todas las cuentas poseen una PublicKey, un saldo, datos y un propietario.
+
+![programas-cuentas](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/programas-cuentas.png)
+
+- Los programas solo pueden cambiar los datos de las cuentas que poseen y solo pueden debitar cuentas de su propiedad.
+- Cualquier programa puede leer y acreditar en cualquier cuenta.
+- La cesión de la propiedad de una cuenta sólo puede ocurrir una vez en la vida de la cuenta.
+- Metaplex: Protocol and application framework for decentralized NFT minting, storefronts, and sales. (github)
+- **System programs**: De forma predeterminada, todas las cuentas inician como propiedad del system program.
+  - Es el único programa que puede asignar la propiedad de la cuenta.
+  - Único programa que puede asignar datos inicializados en cero.
+- **Carga de programas customizados**:
+
+![carga-custom](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/carga-custom.png)
+
+- **Transacciones**: Transacciones -> Programa -> Instrucciones del programa -> cuentas.
+
+![transacciones](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/transacciones.png)
+
+-> Funcionamiento en tiempo de ejecución: El **cliente (dApp)** se comunica con el programa por medio de un proceso de **serialización** donde Solana y los contratos **des-serializan** esa información para ejecutar las transacciones del programa.
+
+![tiempo-ejecucion](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/ejecucion.png)
+
+-> Solana hace uso de la **arquitectura CUDA** la cual se basa en una matriz escalable de multiprocesadores de transmisión multiproceso (hardware).
