@@ -78,7 +78,7 @@ Se evitan los ataques de eclipse, se envía información cifrada sobre cuál es 
 
 El líder divide el bloque en paquetes de hasta 64 kb de tamaño. Para un bloque de 12 mb, el líder produce 2000 paquetes de 64 kb y transmite cada paquete a un validador diferente.
 
-![turbine1](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/turbine1.png)
+![turbine1](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/turbine.png)
 ![turbine2](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/turbine2.png)
 ![turbine3](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/turbine3.png)
 
