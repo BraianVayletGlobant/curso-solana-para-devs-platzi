@@ -57,6 +57,8 @@ En resumen, la solución que trae Solana con el PoH es una sincronización a los
 > - 👍 Descentralización
 > - 👍 Escalabilidad
 
+## Componentes de Solana
+
 ### Tower BFT
 
 Solana usa:
@@ -201,3 +203,12 @@ Solana lo que hace es enviar la información a muchos nodos de la red, y para ev
 Los clientes firman un hash de PoH en un periodo regular La firma es utilizada como fuente de aleatoriedad para elegir una porción especifica del libro mayor La firma se emplea para crear una clave CBC simétrica y el cliente codifica la porción del libro mayor con la clave
 
 Solana utiliza este Poreps debido a que si se utiliza Solana en su capacidad máxima podría llegar a producir hasta 4 Petabytes de información al año si esto se almacenara en nodos serian muy pocos los nodos que podrían almacenar toda esta información por lo tanto la red seria mas centralizada.
+
+### Accounts
+
+![accounts](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/accounts.png)
+
+- Una cuenta se puede marcar como sólo lectura para que sea mucho más rápido su acceso.
+- Una cuenta ejecutable debe ser marcada para tal fin. ¡No se te olvide!
+- Al desplegar un programa, las cuentas que este genera serán de su propiedad, y es el único que puede accederlas y mofidicarlas.
+- Las cuentas pagan alquiler por el uso del sistema. Se puede pagar por adelantado o dejar cierto monto en la cuenta y que se descuente más a mes.
