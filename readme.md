@@ -36,7 +36,9 @@ La red de solana principal cuenta con **200 Nodos** y produce **un bloque cada 4
 
 ## # Problema del Trilema
 
-![trilema](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/trilema.png)
+[![2](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/2.png?raw=true "2")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/2.png?raw=true "2")
+
+[![trilema](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/trilema.png?raw=true "trilema")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/trilema.png?raw=true "trilema")
 
 **Vitalik** dice que **solo se pueden tener dos de esas tres cosas por que tenemos muchas limitaciones por el hardware por la seguridad**
 
@@ -44,7 +46,7 @@ La red de solana principal cuenta con **200 Nodos** y produce **un bloque cada 4
 
 La blockchain de **bitcoin** utiliza un mecanismo de consenso que se llama **proof of work (PoW)** Este mecanismo le permite tener una muy buena seguridad debido a su alta descentralización sin embargo la escalabilidad no es buena debido a que las transacciones de bitcoin son muy lentas.
 
-![PoW](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/PoW.png)
+[![5](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/5.png?raw=true "5")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/5.png?raw=true "5")
 
 > **Resumen PoW:** Es probabilístico, todos los validadores tienen la misma probabilidad de encontrar la solución al problema.
 >
@@ -56,7 +58,7 @@ La blockchain de **bitcoin** utiliza un mecanismo de consenso que se llama **pro
 
 La blockchain de **Ethereum** utiliza una mecanismo de consenso que se llama **proof of stake (PoS)** Este es un mecanismo no se utiliza un programa para ejecutar las transacciones que tiene tanta carga computacional ya que el proof of stake es más determinista que probabilístico. Y esto significa que la red es la que escoge cuáles son los nodos que van a validar las transacciones de acuerdo a la participación en monedas que tenga cada uno de estos nodos. Esta red utiliza algo que se llama Casper y es que en caso de que algún nodo quiera ir en contra de la red pierde todas las monedas.
 
-![PoS](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/PoS.png)
+[![6](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/5.png?raw=true "6")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/6.png?raw=true "6")
 
 > Resumen PoS con Casper: Es determinístico, la red asigna cuales son los nodos que validará la transacción.
 >
