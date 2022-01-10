@@ -38,7 +38,7 @@ La red de solana principal cuenta con **200 Nodos** y produce **un bloque cada 4
 
 [![2](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/2.png?raw=true "2")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/2.png?raw=true "2")
 
-[![trilema](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/trilema.png?raw=true "trilema")](https://raw.githubusercontent.com/BraianVaylet/curso-solana-para-devs-platzi/main/assets/trilema.png?raw=true "trilema")
+[![trilema](https://pbs.twimg.com/media/EtiszlgXYAAKixc.png)](https://pbs.twimg.com/media/EtiszlgXYAAKixc.png)
 
 **Vitalik** dice que **solo se pueden tener dos de esas tres cosas por que tenemos muchas limitaciones por el hardware por la seguridad**
 
